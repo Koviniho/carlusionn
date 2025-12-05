@@ -1,0 +1,623 @@
+{
+  "welcome": "Welcome",
+  "login": "Log In",
+  "signup": "Sign Up",
+  "nav": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "product": "Product",
+    "pricing": "Pricing",
+    "reviews": "Reviews",
+    "news": "News",
+    "more": "More",
+    "tipsNews": "Tips/News",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "homePage": {
+    "heroSection": {
+      "heading": "Accompany your journey with comfort",
+      "content": "Car sales services for various terrain with guaranteed quality",
+      "LatestVehicle": "Latest Vehicle",
+      "WatchVideo": "Watch Video"
+    },
+    "WorkSoftWare": {
+      "heading": "Find Your Work Software",
+      "content": "Which software are you looking for?"
+    },
+    "PackageSlider": {
+      "heading": "SOFTWARE PACKAGE",
+      "content1": "Carlusion software is designed to streamline the vehicle sales process by offering tools that help",
+      "content2": "dealerships manage inventory, sales, customer relationships, financing, and marketing",
+      "slides": [
+        {
+          "image": "path/to/cardCar1.jpg",
+          "price": 45000,
+          "mileage": "35000 km",
+          "model": 2017,
+          "horsepower": "320 hp",
+          "title": "BASIC",
+          "description": "The entry into the world of efficient car sales. Equipped with essential features to streamline basic operations in your garage. Perfect for small businesses or beginners."
+        },
+        {
+          "image": "path/to/cardCar2.jpg",
+          "price": 55000,
+          "mileage": "35000 km",
+          "model": 2017,
+          "horsepower": "320 hp",
+          "title": "STANDARD",
+          "description": "A great car for long drives and family trips, with good fuel economy and excellent comfort."
+        },
+        {
+          "image": "path/to/cardCar3.jpg",
+          "price": 60000,
+          "mileage": "35000 km",
+          "model": 2017,
+          "horsepower": "320 hp",
+          "title": "PREMIUM",
+          "description": "The ultimate solution for professionals. Maximum functionality for the highest demands and maximum efficiency in all areas. Designed for garages that refuse to compromise."
+        }
+      ]
+    },
+    "aboutCarlusion": {
+      "heading": "About CARLUSION",
+      "content": "Carlusion stands for innovation and maximum user-friendliness in car sales. It was important to us to include all the essential functions in the industry and make them as intuitive as possible. Our software provides car sellers and garages with the perfect solution for efficiency and success.",
+      "subHeading": "We are a Trusted Name in Auto Industry",
+      "subContent": "Visited by Million of Car Buyers Every Month!",
+      "descriptionOne": "We proudly stand for quality, innovation, and reliability that our customers have valued for years. Our software has been specifically developed to meet the unique requirements of car sellers and garages. Our goal is to simplify your work processes and free you up to focus on what truly matters.",
+      "descriptionTwo": "With Carlusion, you get a solution that is not only powerful but also easy to use. It was particularly important to us to integrate all essential functions into our software and make them as user-friendly as possible. Trust a software that offers real added value and gives you a competitive advantage.",
+      "ourPartners": "Our Partners",
+      "LearnMore": "Learn More",
+      "featureCards": [
+        {
+          "img": "briefcase",
+          "heading": "10 Years in Business",
+          "content": "A decade of experience and expertise.Trust in software that has proven itself and grows with the demands of the industry."
+        },
+        {
+          "img": "trust",
+          "heading": "Trusted by Millions",
+          "content": "Our software is the first choice for car sellers and garages. Proven, reliable, and designed to drive your success."
+        },
+        {
+          "img": "carIcon",
+          "heading": "Leading in Innovation",
+          "content": "Find the best deals for every budget. Our software helps you offer vehicles at fair and competitive prices."
+        }
+      ]
+    },
+    "CarActionCards": {
+      "areYouLooking": "Are You Looking",
+      "buyCar": "TO BUY A CAR?",
+      "buyContent": "Find your dream car with our vast inventory, advanced search filters, and comparison tools, ensuring you make an informed decision.",
+      "buyButton": "Check Out Our Financing Calculator",
+      "DoYouWantTo": "Do You Want To",
+      "sellCar": "SELL YOUR CAR?",
+      "sellContent": "Slamco laboris nisi ut aliquip ex ea comdo consequat uis aute irure dolor raeprehenderit voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "sellButton": "Let Us Know"
+    },
+    "footer": {
+      "ourPARTNERS": "Our PARTNERS"
+    }
+  },
+  "aboutUs": {
+    "heading": "About Us",
+    "content": "We are revolutionizing car sales with innovative software. With years of experience and a passion for efficiency, we provide garages and car dealers with the tools they need for sustainable success.",
+    "ImageContentCard": {
+      "heading": "OUR MISSON & VALUES",
+      "content": "Our mission is to provide innovative and user-friendly solutions that optimize the vehicle sales process and drive our customers' success. We strive to create a sustainable, efficient, and transparent platform that benefits both dealers and buyers.",
+      "pointsArray": [
+        {
+          "pointHeading":"Innovation",
+          "pointContent":"We constantly strive to integrate the best and latest technologies to meet market demands."
+        },
+        {
+          "pointHeading":"Customer Satisfaction",
+          "pointContent":"Our success is measured by the satisfaction of our customers. We are committed to exceeding their expectations."
+        },
+        {
+          "pointHeading":"Trust",
+          "pointContent":"We build trust through transparency, honesty, and reliable services."
+        },
+        {
+          "pointHeading":"Sustainability",
+          "pointContent":"We promote sustainable practices, both in our technology and in our business practices."
+        }
+      ],
+      "learnMore": "Learn More"
+    },
+    "MeetTheTeam": {
+      "heading": "MEET THE TEAM",
+      "content": "Tempor incididunt labore dolore magna aliqua sed ipsum",
+      "team": [
+        {
+          "img": "profile",
+          "name": "James William",
+          "title": "Quality Assurance Manager",
+          "description": "A dedicated professional responsible for ensuring that products and services meet the highest quality standards, overseeing testing processes, and implementing "
+        },
+        {
+          "img": "profile",
+          "name": "James William",
+          "title": "Quality Assurance Manager",
+          "description": "A dedicated professional responsible for ensuring that products and services meet the highest quality standards, overseeing testing processes, and implementing "
+        },
+        {
+          "img": "profile",
+          "name": "James William",
+          "title": "Quality Assurance Manager",
+          "description": "A dedicated professional responsible for ensuring that products and services meet the highest quality standards, overseeing testing processes, and implementing "
+        }
+      ]
+    }
+  },
+  "product": {
+    "heading": "Product",
+    "content": "Here you will find product as per your wish.",
+    "feature": {
+      "heading": "Core Features",
+      "content": "Here are some core feature ideas for a car-related application",
+      "featuresArray": [
+        {
+          "img": "briefcase",
+          "heading": "Vehicle Management",
+          "content": "Vehicle management is an essential aspect of optimizing fleet operations and ensuring the smooth functioning of transportation services."
+        },
+        {
+          "img": "briefcase",
+          "heading": "Contract Management",
+          "content": "Effective contract management is crucial for maintaining compliance, mitigating risks, and optimizing business relationships."
+        },
+        {
+          "img": "briefcase",
+          "heading": "Financial Management / Annual Reports",
+          "content": "Financial management plays a pivotal role in the strategic planning and operational success of any organization."
+        },
+        {
+          "img": "trust",
+          "heading": "Customer Management",
+          "content": "Effective customer management is essential for building strong relationships and driving business growth."
+        },
+        {
+          "img": "trust",
+          "heading": "Inventory Management",
+          "content": "Effective inventory management is crucial for optimizing operations and maximizing profitability in any business."
+        },
+        {
+          "img": "trust",
+          "heading": "Inquiry Management",
+          "content": "Inquiry management is a vital component of customer relationship management that ensures timely and effective responses to customer inquiries."
+        },
+        {
+          "img": "carIcon",
+          "heading": "Quotation Management",
+          "content": "Streamline your quoting process with our intuitive system, generating accurate and professional quotes in minutes."
+        },
+        {
+          "img": "carIcon",
+          "heading": "Calendar for Appointments and Scheduling",
+          "content": "Effortlessly manage appointments and scheduling with our integrated calendar, ensuring seamless communication with customers and team members."
+        },
+        {
+          "img": "carIcon",
+          "heading": "Payments",
+          "content": "Manage all payment processes quickly, securely, and effortlessly in one central location."
+        }
+        
+      ]
+    },
+    "customerFeedback": {
+      "heading": "CUSTOMER FEEDBACK",
+      "content": "Here you will get feedback from customer"
+    },
+    "DetailsPresentationCard": {
+      "heading": "Detailed presentation of the functions and software",
+      "contentOne": "CARLUSION is an innovative solution specifically designed to simplify the daily work of car dealerships and garages. Our approach was to create a platform that is not only powerful but also user-friendly, covering all essential tasks related to car sales.",
+      "contentTwo": "With our software, you always have a clear overview of your vehicle inventory and all relevant information. The organization and management of customer data are also made efficient, allowing you to quickly and easily respond to individual needs. Creating and tracking contracts or offers is also simplified through our optimized features, saving time and effort.",
+      "WatchVideo": "Watch Video",
+      "contentThree": "Furthermore, Carlusion supports you in structuring financial processes, from an overview of revenues to detailed reports for informed planning. Even scheduling is seamlessly integrated into the software, helping you organize your business optimally. A clear inventory overview ensures that you always know the status of your vehicle stock and can make precise decisions.",
+      "contenFour": "Our core idea is clear: we want to provide you with a tool that simplifies processes and helps you work more efficiently and successfully. Carlusion is not just software; it is a reliable companion that takes your daily work to the next level. With a well-thought-out design and versatile features, it offers everything you need for success in the automotive industry."
+    
+    }
+  },
+  "pricing": {
+    "heading": "PRICING",
+    "content": "Discover our flexible pricing options designed to meet your needs.",
+    "ourPricing": {
+      "heading": "Our Pricing",
+      "content": "Pricing built for businesses of all sizes",
+      "pricingPlans": [
+        {
+          "bgColor": "darkBlue",
+          "planName": "Basic",
+          "price": "89.90$",
+          "description": "For small businesses",
+          "features": [
+            "2 to 10 service providers",
+            "Unlimited SMS & Email notifications",
+            "Add-on integrations available"
+          ]
+        },
+        {
+          "bgColor": "primary",
+          "planName": "Standard",
+          "price": "89.90$",
+          "description": "For medium businesses",
+          "features": [
+            "5 to 20 service providers",
+            "Unlimited SMS & Email notifications",
+            "Add-on integrations available"
+          ]
+        },
+        {
+          "bgColor": "secondary",
+          "planName": "Premium",
+          "price": "139.90$",
+          "description": "For large businesses",
+          "features": [
+            "10 to 50 service providers",
+            "Unlimited SMS & Email notifications",
+            "Priority support",
+            "Advanced integrations"
+          ]
+        }
+      ],
+      "tarrifPlan": [
+        {
+          "btnText": "Kostenlos testen",
+          "borderRadius": "rounded-[20px]",
+          "bgColor": "darkBlue",
+          "planName": "Basic",
+          "price": "49.90$",
+          "description": "Für kleine Unternehmen",
+          "features": [
+            "2 to 10 service providers",
+            "Unlimited SMS & Email notifications",
+            "Add-on integrations available"
+          ]
+        },
+        {
+          "btnText": "Unsubscribe",
+          "borderRadius": "rounded-[20px]",
+          "bgColor": "primary",
+          "planName": "Standard",
+          "price": "89.90$",
+          "description": "Für mittelgrosse Unternehmen",
+          "features": [
+            "5 to 20 service providers",
+            "Unlimited SMS & Email notifications",
+            "Add-on integrations available"
+          ]
+        },
+        {
+          "btnText": "Kostenlos testen",
+          "borderRadius": "rounded-[20px]",
+          "bgColor": "secondary",
+          "planName": "Premium",
+          "price": "139.90$",
+          "description": "Für grosse Unternehmen",
+          "features": [
+            "10 to 50 service providers",
+            "Unlimited SMS & Email notifications",
+            "Priority support",
+            "Advanced integrations"
+          ]
+        }
+      ],
+      "startFreeTrial": "Start Free Trial"
+    },
+    "comparePlan": {
+      "heading": "Compare Plans",
+      "content": "Want to talk to a human about our plans?",
+      "startAChat": " Start a chat",
+      "plans": [
+        {
+          "name": "Basic",
+          "price": "$165/mo",
+          "description": "Small businesses",
+          "trial": "Start trial version"
+        },
+        {
+          "name": "Standard",
+          "description": "Medium-sized businesses",
+          "price": "$265/mo",
+          "trial": "Start trial version"
+        },
+        {
+          "name": "Unlimited",
+          "description": "Large businesses",
+          "price": "$365/mo",
+          "trial": "Start trial version"
+        }
+      ],
+      "tableData": [
+        {
+          "category": "",
+          "rows": [
+            {
+              "label": "Monthly Price (USD)",
+              "values": [
+                "$165/mo",
+                "$265/mo",
+                "$365/mo"
+              ]
+            },
+            {
+              "label": "Service Providers",
+              "description": "Only staff that provide services are counted",
+              "values": [
+              "2 to 10",
+              "Up to 20",
+              "Unlimited"
+            ]
+            },
+            {
+              "label": "Additional Locations",
+              "description": "First location included in each plan",
+             "values": [
+              "$95/month",
+              "$135/month",
+              "$175/month"
+            ]
+
+            }
+          ]
+        },
+        {
+          "category": "Features",
+          "rows": [
+            {
+              "label": "Calendar & Scheduling",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Client Management",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Online Booking",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Retail & Inventory",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Employee Management",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Gift Cards",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Mobile Apps",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Reporting",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Packages",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Memberships",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Marketing",
+          "rows": [
+            {
+              "label": "Email Marketing",
+              "values": [
+                "✓",
+                "Pay-as-you-go",
+                "Pay-as-you-go"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Payment Processing",
+          "rows": [
+            {
+              "label": "Personal Transactions"
+              
+            },
+            {
+              "label": "Virtual Transactions"
+             
+            },
+            {
+              "label": "Custom rates"
+            },
+            {
+              "label": "Bluetooth Card Reader",
+             "values": [
+              "$100/device",
+              "1 included",
+              "1 included"
+            ]
+            }
+          ]
+        },
+        {
+          "category": "Customer Support",
+          "rows": [
+            {
+              "label": "In-app chat support",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "On-demand phone support",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "reviews": {
+    "heading": "Reviews",
+    "content": "A review page dedicated to cars provides detailed insights and evaluations of various car models.",
+    "post": "Post",
+    "reply": "reply",
+    "share": "share",
+    "like": "like"
+  },
+  "privacyPolicy": {
+    "heading": "Privacy Policy and Terms of Service",
+    "content": "This content provides a comprehensive overview and serves as a foundation for your Privacy Policy and Terms of Service.",
+    "privacyPolicy": {
+      "heading": "Privacy Policy",
+      "content": "This content provides a comprehensive overview and serves as a foundation for your Privacy Policy and Terms of Service. Make sure to review it with a legal expert to ensure compliance with relevant laws and regulations."
+    },
+    "informationData": [
+      {
+        "number": 1,
+        "title": "Information We Collect",
+        "content": "The protection of your personal data is a top priority at CARLUSION. With this privacy policy, we want to inform you comprehensively about the data we collect, how we process it, and the measures we take to protect your data. These regulations apply both to the use of our website and to the car sales software we provide."
+      },
+      {
+        "number": 2,
+        "title": "Log Files",
+        "content": "CARLUSION collects personal data solely to enable you to use our services and to continuously improve their quality. This includes information such as your name, email address, residential address, credit card details, and phone number, which you voluntarily provide to us, for example, during registration or when contacting us. In addition, technical data such as your IP address or information about your interaction with our website and software may be automatically collected. This data is used to enhance our services and is never shared with unauthorized third parties without your consent."
+      },
+      {
+        "number": 3,
+        "title": "Cookies and Web Beacons",
+        "content": "We use your data exclusively for clearly defined purposes. This includes providing our software, processing your inquiries, and analyzing usage patterns to better tailor our services to your needs. Your data is stored only for as long as necessary for these purposes and is handled strictly in accordance with legal regulations. CARLUSION employs the latest security standards to protect your information from unauthorized access, loss, or misuse."
+      },
+      {
+        "number": 4,
+        "title": "Privacy Policies",
+        "content": "You have the right to request information about the data we store at any time. If this data is incorrect, you can request its correction, or, in the case of a legitimate interest, you may also request its deletion. We are always available to assist you with any questions or concerns regarding data protection."
+      },
+      {
+        "number": 5,
+        "title": "Datenschutzrichtlinien",
+        "content": "Cookies play an important role on our website in providing you with an optimal user experience. These small files store settings and usage information and help us personalize our services for you. For more information, please refer to our separate cookie policy."
+      }
+    ],
+    "termsofService": {
+      "heading": "Terms of Service",
+      "content": "At Carlusion, your privacy is of the utmost importance to us. This Privacy Policy outlines how we collect, use, disclose, and safeguard your personal information when you use our platform. By using Carlusion, you agree to the collection and use of your data in accordance with this policy."
+    },
+    "termsOfServicesData": [
+      {
+        "number": 1,
+        "title": "Informationen, die wir sammeln",
+        "content": "The use of the CARLUSION website and software is subject to the following terms and conditions. By accessing our services, you agree to these regulations. Our software has been specifically designed to provide car sellers and garages with a flexible and powerful solution for organizing their daily operations. We expect our users to use the software responsibly and in compliance with applicable legal regulations."
+      },
+      {
+        "number": 2,
+        "title": "Protokolldateien",
+        "content": "Registration is a prerequisite for using our software. As a registered user, you are responsible for keeping your login credentials secure and protecting them from unauthorized access. Any form of misuse, whether through false information or actions that violate applicable laws, is strictly prohibited."
+      },
+      {
+        "number": 3,
+        "title": "Cookies and Web Beacons",
+        "content": "Our software offers a variety of features designed to optimize your workflows. These include managing vehicles, contracts, and customer data, as well as generating financial overviews and reports. All these features are available to you as part of the provided services; however, CARLUSION does not guarantee the continuous availability of the software. Maintenance work or technical disruptions may temporarily restrict access."
+      },
+      {
+        "number": 4,
+        "title": "Datenschutzrichtlinien",
+        "content": "The security of your data is important to us. However, CARLUSION assumes no liability for damages resulting from improper use of the software or unforeseen technical issues. It is your responsibility to regularly create backup copies of your data to prevent any loss."
+      },
+      {
+        "number": 5,
+        "title": "Datenschutzrichtlinien",
+        "content": "We reserve the right to modify these terms of use at any time. Significant changes will be communicated to you in a timely manner via our website or by email. If you do not agree with the changes, you are free to discontinue the use of our services."
+      },
+      {
+        "number": 6,
+        "title": "Datenschutzrichtlinien",
+        "content": "All legal matters related to the use of CARLUSION services are governed by the laws of the country where our company is based. The jurisdiction for any legal disputes is Switzerland. If you have any questions or concerns regarding these terms of use, you can contact our customer support at any time."
+      }
+    ]
+  },
+  "tipsAndNews": {
+    "heading": "Tips/News",
+    "content": "A clean car is a happy car. Discover expert detailing tips that will make your vehicle shine, inside and out.",
+    "latestNews": {
+      "heading": "Latest News",
+      "content": "Here you will find the latest news about car lusion"
+    }
+  },
+  "carDetailsPage": {
+    "heading": "toyota avalon TX",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "carDetails": {
+      "name": "toyota avalon TX",
+      "descriptionOne": "We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable cookies through your browser settings, but this may affect your ability to use some features of our platform. We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable cookies through your browser settings, but this may affect your ability to use some features of our platform.",
+      "descriptionTwo": "We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable cookies through your browser settings, but this may affect your ability to use some features of our platform. We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable cookies through your browser settings, but this may affect your ability to use some features of our platform."
+    },
+    "recentViewed": {
+      "heading": "Recent viewed",
+      "content": "Behalten Sie den Überblick über Ihre zuletzt angesehenen Fahrzeuge. Schneller Zugriff auf Ihre Favoriten."
+    }
+  },
+  "tipsAndNewDetailPage": {
+    "heading": "News BLOG",
+    "content": "A clean car is a happy car. Discover expert detailing tips that will make your vehicle shine, inside and out.",
+    "detailsCard": {
+      "heading": "GENERAL MOTORS FIRST IN SELF-DRIVING CARS",
+      "contentOne": "We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable ",
+      "contentTwo": "cookies through your browser settings, but this may affect your ability to use some features of our platform. We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You choose to disable cookies through your browser settings, but this may affect your ability to use some features of our platform. ",
+      "coutentThree": "We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable cookies through your browser settings, but this may affect your ability to use some features ofour platform. ",
+      "contentFour": "We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable",
+      "contentFive": "We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable"
+    }
+  }
+}

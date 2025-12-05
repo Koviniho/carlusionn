@@ -1,0 +1,763 @@
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
+import { IoSearchOutline } from "react-icons/io5";
+import Button from "../Button";
+import { FaPlus, FaRegEdit, FaRegEye } from "react-icons/fa";
+import CustomTable from "../Custom-Tabel";
+import { MdDeleteOutline } from "react-icons/md";
+import * as Yup from "yup";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addNewContract,
+  deleteContract,
+  getAllContract,
+  setLimit,
+  setPage,
+  updateContractById,
+} from "../../store/features/contract/contractSlice";
+import { formatDate } from "../../utils/dateFormate";
+import { ShimmerTable } from "react-shimmer-effects";
+import NoDataFound from "../NoDataFound";
+import WarningModel from "../Modals/warning-model";
+import PopUpModel from "../Modals/pop-up-modals";
+import { useFormik } from "formik";
+import CustomInput from "../Input/custoInput";
+import { LuDownload } from "react-icons/lu";
+import showToast from "../../utils/toaster";
+import { config } from "../../services/api";
+import { getAllContractTemplates } from "../../store/features/contractTemplates/contractTemplatesSlice";
+import { getAllCustomers } from "../../store/features/customer/customer.slice";
+import { getAllVehicle } from "../../store/features/vehicle/vehicleSlice";
+import { Link } from "react-router-dom";
+import LeasingContractForm from "./forms/LeasingContractForm";
+import LoneAgreementForm from "./forms/LoanAgreementForm";
+import PurchaseAgreementForm from "./forms/PurchaseAgreementForm";
+import PurchaseContractForm from "./forms/PurchaseContractForm";
+import useUserInfo from "../../hooks/useUserInfo";
+import { fetchCustomers } from "../../store/features/customer/fetchCustomerSlice";
+import { fetchAddedVehicles } from "../../store/features/vehicle/getAddedVehicles";
+import Pagination from "../Pagination";
+
+const validationSchema = Yup.object({
+  customerName: Yup.string().required("Customer Name is required"),
+  vehicle: Yup.string().required("Vehicle is required"),
+  seller: Yup.string().required("Seller is required"),
+  status: Yup.string().required("Status is required"),
+
+  creationDate: Yup.date().required("Creation Date is required"),
+  pickupDate: Yup.date().required("Pickup Date is required"),
+  leasingProvider: Yup.string().required("Leasing Provider is required"),
+  downPayment: Yup.string().required("downPayment is required"),
+  annualMileage: Yup.string().required("Annual Mileage is required"),
+  duration: Yup.date().required("Duration is required"),
+  monthlyCost: Yup.string().required("Monthly Costs are required"),
+  residualValue: Yup.string().required("Remaining Value is required"),
+  excessiveMileageCost: Yup.string().required(
+    "excessive Mileage Costs are required"
+  ),
+});
+
+function TableHeader() {
+  return (
+    <thead>
+      <tr className="bg-primary !rounded-none">
+        {/* <th
+          scope="col"
+          className="py-3.5 pl-5 text-left font-semibold text-white"
+        >
+          <input type="checkbox" />
+        </th> */}
+        <th
+          scope="col"
+          className="w-1/6 pl-5 py-3.5 pr-3 text-left font-semibold text-white"
+        >
+          Contract ID
+        </th>
+        <th
+          scope="col"
+          className="w-1/6 px-3 py-3.5 text-left font-semibold text-white"
+        >
+          Customer name
+        </th>
+        <th
+          scope="col"
+          className="w-1/6 px-3 py-3.5 text-left font-semibold text-white"
+        >
+          Car Model
+        </th>
+
+        <th
+          scope="col"
+          className="w-1/6 px-3 py-3.5 text-left font-semibold text-white"
+        >
+          Date Created
+        </th>
+        <th
+          scope="col"
+          className="w-1/6 px-3 py-3.5 text-left font-semibold text-white"
+        >
+          Status
+        </th>
+        <th
+          scope="col"
+          className="w-1/6 px-3 py-3.5 text-left font-semibold text-white"
+        >
+          Download Contract
+        </th>
+
+        <th
+          scope="col"
+          className="w-1/6 px-3 py-3.5 text-left font-semibold text-white"
+        >
+          Actions
+        </th>
+      </tr>
+    </thead>
+  );
+}
+
+function TableBody({ data, selectedData, setUpdateContract }) {
+  const dispatch = useDispatch();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedContractTemplate, setContractTemplates] = useState(null);
+
+  const [contractId, setcontractId] = useState(null);
+  const [customerNameId, setcustomerNameId] = useState(null);
+  const [carModelId, setCarModelId] = useState(null);
+  const [countractIDOption, SetCountractIdOption] = useState([
+    { value: "", label: "Select Contract" },
+  ]);
+  const [customerNameOption, SetcustomerNameOption] = useState([
+    { value: "", label: "Select name" },
+  ]);
+  const [vehicleOption, SetvehicleOption] = useState([
+    { value: "", label: "Select Vehicle" },
+  ]);
+
+  const { contractTemplates } = useSelector((state) => state.contractTamplets);
+  const { customers } = useSelector((state) => state.customer);
+  const { vehicle } = useSelector((state) => state.vehicle);
+
+  const formik = useFormik({
+    initialValues: {
+      contractType: "",
+      customerName: "",
+      vehicle: "",
+      seller: "",
+      creationDate: "",
+      pickupDate: "",
+      leasingProvider: "",
+      deposit: "",
+      annualMileage: "",
+      duration: "",
+      monthlyCosts: "",
+      remainingValue: "",
+      additionalMileageCosts: "",
+    },
+    validationSchema: validationSchema,
+
+    onSubmit: async (values) => {
+      const data = {
+        contractId: contractId,
+        customerName: customerNameId,
+        carModel: carModelId,
+        status: values.status,
+      };
+      const response = await dispatch(
+        updateContractById({
+          id: selectedContractTemplate?._id,
+          body: data,
+        })
+      );
+
+      if (response) {
+        dispatch(getAllContract());
+
+        // setContractModal(true);
+      }
+    },
+  });
+  const handleEditClick = async (item) => {
+    try {
+      // setUpdateContract(item)
+      setContractTemplates(item);
+      setModalOpen(true);
+
+      formik.setValues({
+        contractId: item?.contractId?.templateId || "-",
+        customerName: item?.customerName?.customerName || "-",
+        carModel: item?.carModel?.model || "-",
+        status: item?.status || "-",
+      });
+
+      setcontractId(item?.contractId?._id);
+      setcustomerNameId(item?.customerName?._id);
+      setCarModelId(item?.carModel?._id);
+    } catch (error) {}
+  };
+
+
+  const handelDelete = async (item) => {
+    const response = await dispatch(deleteContract(item?.id));
+    if (response) {
+      dispatch(getAllContract());
+    }
+  };
+  const handleDownloadContract = async (item) => {
+    try {
+      const fileName = item?.contractId?.contractFile;
+
+      if (!fileName) {
+        throw new Error("File name not found");
+      }
+
+      // Construct the file URL
+      const fileUrl = `${config.imageBaseUrl}/contractTemplates/${fileName}`;
+
+      // Open the file URL in a new tab
+      window.open(fileUrl, "_blank");
+
+      // Display success toast
+      showToast("success", "Contract opened in a new tab");
+    } catch (error) {
+      showToast("error", error.message || "Failed to open file");
+    }
+  };
+  useEffect(() => {
+    if (contractTemplates?.results) {
+      const contractId = [
+        { value: "", label: "Select Contract Id" },
+        ...contractTemplates.results.map((item) => ({
+          value: item?.templateId,
+          label: item?.templateId,
+          id: item?._id,
+        })),
+      ];
+      SetCountractIdOption(contractId);
+    }
+    if (customers?.results) {
+      const contractName = [
+        { value: "", label: "Select Customer Name" },
+        ...customers.results.map((item) => ({
+          value: item?.customerName,
+          label: item?.customerName,
+          id: item?._id,
+        })),
+      ];
+      SetcustomerNameOption(contractName);
+    }
+    if (vehicle?.results) {
+      const vehicleOptions = [
+        { value: "", label: "Select Vehicle" }, // Add the first option
+        ...vehicle.results.map((item) => ({
+          value: item?.model,
+          label: item?.model,
+          id: item?._id,
+        })),
+      ];
+      SetvehicleOption(vehicleOptions);
+    }
+  }, [contractTemplates, customers, vehicle]);
+  return (
+    <tbody className="bg-white">
+      {data?.map((item, index) => {
+        const isSelected = selectedData.includes(item);
+
+        return (
+          <tr
+            key={index}
+            className={`${
+              isSelected ? "bg-gray-200" : "hover:bg-gray-50 cursor-pointer"
+            } border-b border-gray-100`}
+          >
+            {/* <td className="whitespace-nowrap py-4 px-5 font-medium">
+              <input type="checkbox" />
+            </td> */}
+            <td className="w-1/6 pl-5 capitalize whitespace-nowrap text-primary px-3 py-4 text-lightBlackText">
+              {item?.id || "-"}{" "}
+            </td>{" "}
+            <td className="w-1/6 whitespace-nowrap px-3 py-4 text-lightBlackText">
+              {item?.customerName || "-"}{" "}
+            </td>{" "}
+            <td className="w-1/6 whitespace-nowrap px-3 py-4 text-lightBlackText">
+              {item?.vehicleModel || "-"}
+            </td>{" "}
+            <td className="w-1/6 whitespace-nowrap px-3 py-4 text-lightBlackText">
+              {formatDate(item?.createdAt)}{" "}
+            </td>
+            <td
+              className={`w-1/6 whitespace-nowrap px-3 py-4 text-lightBlackText capitalize ${
+                item?.status === "signed"
+                  ? "text-secondary"
+                  : item?.status === "expired"
+                  ? "text-error"
+                  : item?.status === "pending"
+                  ? "text-primary"
+                  : "text-grayText"
+              }`}
+            >
+              {item?.status}
+            </td>
+            <td className=" whitespace-nowrap px-3 py-4 text-lightBlackText  ">
+              <LuDownload
+                size={20}
+                className="text-[#137822] w-full"
+                onClick={() => handleDownloadContract(item)}
+              />
+            </td>
+            <td className="whitespace-nowrap px-3 py-4  flex items-center gap-3">
+              <button onClick={() => handleEditClick(item)}>
+                <FaRegEdit size={17} className="text-primary" />
+              </button>
+           
+              <WarningModel
+                buttonTwoText="Delete"
+                bgColor="danger"
+                trigger={
+                  <button>
+                    <MdDeleteOutline size={17} className="text-error" />
+                  </button>
+                }
+                onSave={() => handelDelete(item)}
+              >
+                <h3 className="mt-5.5 pb-2 text-xl font-medium text-black sm:text-2xl">
+                  Delete Contract
+                </h3>
+                <p className="my-2 text-gray-400">
+                  Are you sure you want to delete this Contract?
+                </p>
+              </WarningModel>
+
+              <Link to={`/dashboard/contract-management/${item?.id}`}>
+                <FaRegEye className="text-secondary" />
+              </Link>
+            </td>
+          </tr>
+        );
+      })}
+    </tbody>
+  );
+}
+
+////////////////main component Integration done
+const AllContracts = ({ status = "" }) => {
+  const dispatch = useDispatch();
+  const [selectedContract, setSelectedContract] = useState("lease");
+  const [addContract, setAddContract] = useState(false);
+  const [contractId, setcontractId] = useState(null);
+  const [customerNameId, setcustomerNameId] = useState(null);
+  const [carModelId, setCarModelId] = useState(null);
+  const [countractIDOption, SetCountractIdOption] = useState([
+    { value: "", label: "Select Contract" },
+  ]);
+
+  const [customerNameOption, SetcustomerNameOption] = useState([
+    { value: "", label: "Select name" },
+  ]);
+
+  const [vehicleOption, SetvehicleOption] = useState([
+    { value: "", label: "Select Vehicle" },
+  ]);
+
+  const { contract, isLoading, page, limit } = useSelector(
+    (state) => state.contract
+  );
+
+  const { contractTemplates } = useSelector((state) => state.contractTamplets);
+
+  const { customers } = useSelector((state) => state.customer);
+  const { vehicle } = useSelector((state) => state.vehicle);
+
+  useEffect(() => {
+    dispatch(getAllContractTemplates());
+    dispatch(getAllCustomers());
+    dispatch(getAllVehicle({}));
+  }, [dispatch]);
+  useEffect(() => {
+    if (status) {
+      dispatch(getAllContract({ page, limit, status }));
+    } else {
+      dispatch(getAllContract({ page, limit }));
+    }
+  }, [dispatch, limit, page, status]);
+
+  useEffect(() => {
+    if (contractTemplates?.results) {
+      const contractId = [
+        { value: "", label: "Select Contract Id" },
+        ...contractTemplates.results.map((item) => ({
+          value: item?.templateId,
+          label: item?.templateId,
+          id: item?._id,
+        })),
+      ];
+      SetCountractIdOption(contractId);
+    }
+    if (customers?.results) {
+      const contractName = [
+        { value: "", label: "Select Customer Name" },
+        ...customers.results.map((item) => ({
+          value: item?.customerName,
+          label: item?.customerName,
+          id: item?._id,
+        })),
+      ];
+      SetcustomerNameOption(contractName);
+    }
+    if (vehicle?.results) {
+      const vehicleOptions = [
+        { value: "", label: "Select Vehicle" }, // Add the first option
+        ...vehicle.results.map((item) => ({
+          value: item?.model,
+          label: item?.model,
+          id: item?._id,
+        })),
+      ];
+      SetvehicleOption(vehicleOptions);
+    }
+  }, [contractTemplates, customers, vehicle]);
+  const formik = useFormik({
+    initialValues: {
+      customerName: "",
+      vehicle: "",
+      seller: "",
+      status: "",
+      creationDate: "",
+      pickupDate: "",
+      leasingProvider: "",
+      downPayment: "",
+      annualMileage: "",
+      duration: "",
+      monthlyCost: "",
+      residualValue: "",
+      excessiveMileageCost: "",
+      remarks: "",
+    },
+    validationSchema,
+    onSubmit: async (values) => {
+      const {
+        leasingProvider,
+        downPayment,
+        annualMileage,
+        duration,
+        monthlyCost,
+        residualValue,
+        customerName,
+        seller,
+        vehicle,
+        excessiveMileageCost,
+        remarks,
+        ...remainingValues
+      } = values;
+      const financing = {
+        leasingProvider,
+        downPayment,
+        annualMileage,
+        duration,
+        monthlyCost,
+        residualValue,
+      };
+      const additional = {
+        excessiveMileageCost,
+        remarks,
+      };
+      const data = {
+        financing,
+        additional,
+        customerId: customerName,
+        contractType: selectedContract,
+        sellerId: seller,
+        vehicleId: vehicle,
+        ...remainingValues,
+      };
+      const response = await dispatch(addNewContract(data)).unwrap();
+
+      if (response?.success) {
+        dispatch(getAllContract(page, limit));
+        setAddContract(false); // Close modal after submission
+      }
+    },
+  });
+
+  const userData = useUserInfo();
+
+  const fields = [
+    {
+      name: "customerName",
+      label: "Customer Name",
+      type: "select",
+      options: [
+        { value: "", label: "Select Customer" },
+        { value: "Jhon Doe", label: "John Doe" },
+        { value: "Jane Smith", label: "Jane Smith" },
+        { value: "Alice Johnson", label: "Alice Johnson" },
+      ],
+    },
+    {
+      name: "vehicle",
+      label: "Vehicle",
+      type: "select",
+      options: [
+        { value: "", label: "Search Vehicle ..." },
+        { value: "ABC123", label: "Toyota Camry - ABC123" },
+        { value: "XYZ456", label: "Honda Accord - XYZ456" },
+        { value: "LMN789", label: "Ford Focus - LMN789" },
+      ],
+    },
+    {
+      name: "seller",
+      label: "Seller",
+      type: "select",
+      options: [
+        { value: "", label: "Select Seller" },
+        { value: userData?.userId, label: userData?.username },
+      ],
+    },
+    {
+      name: "status",
+      label: "Status",
+      type: "select",
+      options: [
+        { value: "", label: "Select Status" },
+        { value: "draft", label: "Draft" },
+        { value: "open", label: "Open" },
+        { value: "signed", label: "Signed" },
+        { value: "expired", label: "Expired" },
+      ],
+    },
+    { name: "creationDate", label: "Creation Date", type: "date" },
+    { name: "pickupDate", label: "Pickup Date", type: "date" },
+  ];
+
+  const financingFields = [
+    {
+      name: "leasingProvider",
+      label: "Leasing Provider",
+      type: "select",
+      options: [
+        { value: "", label: "Select Leasing Provider" },
+        { value: "Provider 1", label: "Provider 1" },
+        { value: "Provider 2", label: "Provider 2" },
+        { value: "Provider 3", label: "Provider 3" },
+      ],
+    },
+    // { name: "deposit", label: "Deposit", type: "text" },
+    { name: "downPayment", label: "Down Payment", type: "number" },
+
+    {
+      name: "annualMileage",
+      label: "Annual Mileage",
+      type: "select",
+      options: [
+        { value: "", label: "Select Annual Mileage" },
+        { value: "5000", label: "5,000 miles" },
+        { value: "10000", label: "10,000 miles" },
+        { value: "15000", label: "15,000 miles" },
+        { value: "20000", label: "20,000 miles" },
+        { value: "25000", label: "25,000 miles" },
+      ],
+    },
+    { name: "duration", label: "Duration", type: "date" },
+    { name: "monthlyCost", label: "Monthly Cost", type: "number" },
+    { name: "residualValue", label: "Residual Value", type: "number" },
+    {
+      name: "excessiveMileageCost",
+      label: "excessive Mileage Cost",
+      type: "number",
+    },
+    {
+      name: "remarks",
+      label: "Remarks",
+      type: "textarea",
+      placeholder:
+        " - Porsche Approved Garantie bis 07.09.2027 \n - 8-fach bereift (Kompletträder) \n - Zwei Schlüssel \n - Beulen HR und Hinten instand stellen \n - Fahrzeugeintausch Hyundai i30 CHF 13’000.- (separater Kaufvertrag)) \n  ",
+    },
+  ];
+
+  const vehicleAttributes = [
+    { name: "mfx", label: "MFX Vorführung", type: "checkbox" },
+    { name: "service", label: "Service", type: "text" },
+    { name: "repair", label: "Reparatur", type: "text" },
+  ];
+
+  const contractAttributes = [
+    { name: "eSignature", label: "E-Signature", type: "checkbox" },
+    { name: "invoice", label: "Rechnung Erstellen", type: "checkbox" },
+    { name: "email", label: "Email Versand", type: "checkbox" },
+  ];
+
+  /////////////leasing Integration//////////////////////
+  const [searchInput, setSearchInput] = useState("");
+
+  const { allVehicles } = useSelector((state) => state?.fetchAddedVehicleSlice);
+  const { allCustomers } = useSelector((state) => state?.fetchCustomerSlice);
+
+  const customerOptions =
+    allCustomers?.results?.map((customer) => ({
+      label: `${customer.customerName} `,
+      value: customer.id, // Ensure this is a unique identifier
+    })) || [];
+
+  const vehicleOptions =
+    allVehicles?.results?.map((vehicle) => ({
+      label: `${vehicle.make} ${vehicle.model}`,
+      value: vehicle.id, // Ensure this is a unique identifier
+    })) || [];
+
+  useEffect(() => {
+    dispatch(fetchCustomers({ page: 1, limit: 10, search: searchInput }));
+    dispatch(fetchAddedVehicles({ page: 1, limit: 10, search: searchInput }));
+  }, [dispatch, searchInput]);
+  //////////////search Implementation ///////////////
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (e) => {
+    const query = e.target.value.trim();
+    dispatch(getAllContract({ page, limit, search: query }));
+
+    setSearchQuery(query);
+  };
+
+  ////////////////////// for update/////////////////////////////
+  const [updateContract, setUpdateContract] = useState("");
+
+  return (
+    <div>
+      <div className="grid grid-cols-4 gap-6 mb-12 mt-5">{/* Stats */}</div>
+      <div className="bg-white border rounded-lg shadow-2xl">
+        <div className="flex items-center justify-between p-4">
+          {/* Search */}
+          <div className="flex items-end  gap-12">
+            <div className="flex items-center gap-2 border-b border-gray-100 w-[350px]">
+              <IoSearchOutline className="h-5 w-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search by Id"
+                className="pr-4 py-2 rounded-lg outline-none w-full"
+                value={searchQuery}
+                onChange={handleSearch}
+              />
+            </div>
+            <p className="text-primary text-sm font-medium">
+              {contract?.totalCount} results found
+            </p>
+          </div>
+          <div className="flex gap-5">
+            {/* <Button
+              text="Filters"
+              borderRadius="rounded-md"
+              textColor="white"
+              fontSize="text-base"
+              icon={<MdTune className="h-5 w-5 rotate-90" />}
+            /> */}
+            <PopUpModel
+              heading="Create Contract"
+              trigger={
+                <Button
+                  text="New Contract"
+                  borderRadius="rounded-md"
+                  textColor="white"
+                  fontSize="text-base"
+                  icon={<FaPlus className="h-3 w-3" />}
+                />
+              }
+              modalOpen={addContract}
+              setModalOpen={setAddContract}
+            >
+              {/* space-y-7 p-6 bg-white rounded-md shadow-md */}
+              <form
+                onSubmit={formik.handleSubmit}
+                className="space-y-7 p-6 bg-white rounded-md shadow-md"
+              >
+                <CustomInput
+                  name="identifyContract"
+                  label="Identify Contract"
+                  type="select"
+                  options={[
+                    // { value: "", label: "Select Contract" },
+                    { value: "lease", label: "Leasing Contract" },
+                    // { value: "lone-agreement", label: "Lone Agreement" },
+                    {
+                      value: "purchase-agreement-selling",
+                      label: "Selling Contract",
+                    },
+                    {
+                      value: "purchase-agreement-buying",
+                      label: "Buying Contract",
+                    },
+                  ]}
+                  onChange={(e) => setSelectedContract(e.target.value)} // Updating state on change
+                />
+
+                {/* Conditional Rendering */}
+                {selectedContract === "lease" && (
+                  <LeasingContractForm
+                    financingFields={financingFields}
+                    fields={fields}
+                    formik={formik}
+                    setcontractId={setcontractId}
+                    setcustomerNameId={setcustomerNameId}
+                    setCarModelId={setCarModelId}
+                    countractIDOption={countractIDOption}
+                    customerNameOption={customerNameOption}
+                    vehicleOption={vehicleOption}
+                    contractAttributes={contractAttributes}
+                    vehicleAttributes={vehicleAttributes}
+                    customerOptions={customerOptions}
+                    vehicleOptions={vehicleOptions}
+                    searchInput={searchInput}
+                    setSearchInput={setSearchInput}
+                  />
+                )}
+                {selectedContract === "purchase-agreement-buying" && (
+                  <PurchaseAgreementForm
+                    customerOptions={customerOptions}
+                    vehicleOptions={vehicleOptions}
+                    searchInput={searchInput}
+                    setSearchInput={setSearchInput}
+                    selectedContract={selectedContract}
+                    setAddContract={setAddContract}
+                  />
+                )}
+                {selectedContract === "purchase-agreement-selling" && (
+                  <PurchaseContractForm
+                    customerOptions={customerOptions}
+                    vehicleOptions={vehicleOptions}
+                    searchInput={searchInput}
+                    setSearchInput={setSearchInput}
+                    selectedContract={selectedContract}
+                    setAddContract={setAddContract}
+                  />
+                )}
+                {selectedContract === "lone-agreement" && <LoneAgreementForm />}
+              </form>
+            </PopUpModel>
+          </div>
+        </div>
+        {isLoading ? (
+          <ShimmerTable row={10} col={5} />
+        ) : contract?.results?.length === 0 ? (
+          <NoDataFound content="Contract" />
+        ) : (
+          <CustomTable
+            TableHeader={TableHeader}
+            TableBody={(props) => <TableBody {...props} />}
+            data={contract?.results}
+            setUpdateContract={setUpdateContract}
+          />
+        )}
+        {contract?.totalCount <= 10 ? null : (
+          <Pagination
+            currentPage={page}
+            totalCount={contract?.totalCount}
+            itemsPerPage={limit}
+            onPageChange={(newPage) => dispatch(setPage(newPage))}
+            handleItemsPerPageChange={(value) => dispatch(setLimit(value))}
+          />
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default AllContracts;

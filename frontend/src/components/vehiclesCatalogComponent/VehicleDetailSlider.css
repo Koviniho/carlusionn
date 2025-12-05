@@ -1,0 +1,41 @@
+.image-gallery {
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .image-gallery-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px; /* Space between main image and thumbnails */
+  }
+  
+  .image-gallery-slide-wrapper {
+    flex-grow: 1; /* Allows the main image to take available space */
+    width: 70%; /* Adjust as needed */
+  }
+  
+  .image-gallery-thumbnails-wrapper {
+    flex-grow: 1; /* Allows thumbnails to take available space */
+    display: flex;
+    flex-direction: row; /* Align thumbnails horizontally */
+    overflow-x: auto; /* Enable scrolling if needed */
+    justify-content: center;
+    gap: 5px; /* Space between thumbnails */
+  }
+  
+  .image-gallery-thumbnails {
+    display: flex;
+    flex-wrap: wrap; /* Allows thumbnails to take up space */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .image-gallery-thumbnail {
+    flex: 1 1 auto; /* Makes thumbnails grow dynamically */
+    max-width: 100px; /* Set max width for each thumbnail */
+    cursor: pointer;
+  }
+  

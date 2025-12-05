@@ -1,0 +1,121 @@
+.custom-gallery .image-gallery-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the container without distorting the aspect ratio */
+    height: 70vh; /* Set the height to fit the screen, adjust if needed */
+  }
+  
+  /* Force the gallery container to maintain aspect ratio */
+  .custom-gallery .image-gallery-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh; /* Limit the gallery container to a maximum height */
+    overflow: hidden; /* Ensure no overflow occurs */
+  }
+  
+  /* Style adjustments for the modal container */
+  .fixed.inset-0 {
+    padding: 20px; /* Optional: Add padding around the modal */
+  }
+  
+  .image-gallery .image-gallery-left-nav,
+  .image-gallery .image-gallery-right-nav {
+    color: var(--white-color);
+  }
+  
+  .image-gallery-left-nav .image-gallery-svg,
+  .image-gallery-right-nav .image-gallery-svg {
+    width: 50px;
+    height: 40px;
+  }
+  
+  .image-gallery-icon:hover,
+  .image-gallery-icon:focus {
+    color: var(--primary-color);
+  }
+  
+  .image-gallery-slide .image-gallery-image {
+    width: 319px;
+    height: 219px;
+    object-fit: cover;
+    border-radius: 12px;
+    /* border: 2px solid red; */
+    margin-bottom: 10px;
+  }
+  
+  /* Thumbnail styling */
+  .image-gallery .image-gallery-thumbnail.active,
+  .image-gallery .image-gallery-thumbnail:hover,
+  .image-gallery .image-gallery-thumbnail:focus {
+    /* border: 2px solid var(--primary-color); */
+    border-radius: 10px;
+  }
+  .image-gallery-thumbnail {
+    /* border-top: 30px; */
+    width: 30%;
+    /* border: 2px solid red; */
+  }
+  
+  .image-gallery-thumbnail .image-gallery-thumbnail-image {
+    vertical-align: middle;
+    width: 100%;
+    border-top: 30px;
+    /* border: 2px solid red; */
+  
+    height: 60px; /* Fixed height for thumbnails */
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* Play button styling */
+  .image-gallery .image-gallery-play-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+  }
+  
+  /* Fullscreen button styling */
+  .image-gallery .image-gallery-fullscreen-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+  }
+  
+  /* Dot navigation styling */
+  .image-gallery .image-gallery-bullets .image-gallery-bullet.active,
+  .image-gallery .image-gallery-bullets .image-gallery-bullet:hover {
+    background-color: var(--primary-color);
+  }
+  
+  /* Fullscreen mode adjustments */
+  .image-gallery-content.fullscreen .image-gallery-slide .image-gallery-image {
+    height: auto; /* Ensure height adapts based on viewport */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Ensure the image does not exceed the viewport height */
+    object-fit: contain; /* Maintain aspect ratio */
+    border-radius: 0; /* Remove border radius in fullscreen */
+  }
+  
+  /* Adjustments for thumbnails in fullscreen mode if needed */
+  .image-gallery-thumbnails-bottom.fullscreen .image-gallery-thumbnails {
+    display: none; /* Hide thumbnails in fullscreen mode */
+  }
+  
+  @media (min-width: 992px) {
+    .custom-gallery .image-gallery-slides {
+      width: 850px;
+      object-fit: cover; /* Ensures images fill the container without distorting the aspect ratio */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .custom-gallery .image-gallery-slide img {
+      height: 50vh; /* Set the height to fit the screen, adjust if needed */
+    }
+  
+    /* Force the gallery container to maintain aspect ratio */
+    .custom-gallery .image-gallery-content {
+      height: 50vh; /* Limit the gallery container to a maximum height */
+    }
+  }
+  

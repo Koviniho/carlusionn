@@ -1,0 +1,629 @@
+{
+  "welcome": "Willkommen",
+  "login": "Se connecter",
+  "signup": "S'inscrire",
+  "nav": {
+    "home": "Home",
+    "aboutUs": "À propos de nous",
+    "product": "Produit",
+    "pricing": "Tarification",
+    "reviews": "Bewertungen",
+    "news": "Avis",
+    "more": "Plus",
+    "tipsNews": "Conseils / Actualités",
+    "privacyPolicy": "Politique de confidentialité"
+  },
+  "homePage": {
+    "heroSection": {
+      "heading": "Accompagnez votre voyage avec confort",
+      "content": "Services de vente de voitures pour divers terrains avec qualité garantie",
+      "LatestVehicle": "Essai gratuit de 7 jours",
+      "WatchVideo": "Regarder la vidéo"
+    },
+    "WorkSoftWare": {
+      "heading": "TROUVEZ VOTRE LOGICIEL DE TRAVAIL",
+      "content": "Quel logiciel recherchez-vous ?"
+    },
+    "PackageSlider": {
+      "heading": "PACK LOGICIEL",
+      "content1": "Le logiciel Carlusion est conçu pour simplifier le processus de vente de véhicules en offrant des outils qui ",
+      "content2": "aident les concessionnaires à gérer l'inventaire, les ventes, les relations clients, le financement et le marketing. ",
+      "slides": [
+        {
+          "image": "path/to/cardCar1.jpg",
+          "price": 45000,
+          "mileage": "35000 km",
+          "model": 2017,
+          "horsepower": "320 ps",
+          "title": "BASIC",
+          "description": "Der Einstieg in die Welt der effizienten Autoverkäufe. Mit den wichtigsten Funktionen ausgestattet, um grundlegende Abläufe in Ihrer Garage zu optimieren. Perfekt für kleinere Unternehmen oder Einsteiger."
+        },
+        {
+          "image": "path/to/cardCar2.jpg",
+          "price": 55000,
+          "mileage": "35000 km",
+          "model": 2017,
+          "horsepower": "320 ps",
+          "title": "STANDARD",
+          "description": "Ein Allrounder für Autoverkäufer, die mehr benötigen. Erweitertes Feature-Set, das den Verkauf vereinfacht und die Verwaltung Ihrer Fahrzeuge effizienter macht. Ideal für wachsende Unternehmen."
+        },
+        {
+          "image": "path/to/cardCar3.jpg",
+          "price": 60000,
+          "mileage": "35000 km",
+          "model": 2017,
+          "horsepower": "320 ps",
+          "title": "PREMIUM",
+          "description": "Die ultimative Lösung für Profis. Maximaler Funktionsumfang für höchste Ansprüche und maximale Effizienz in allen Bereichen. Entwickelt für Garagen, die keine Kompromisse eingehen wollen."
+        }
+      ]
+    },
+    "aboutCarlusion": {
+      "heading": "À PROPOS DE CARLUSION",
+      "content": "Carlusion représente l'innovation et une convivialité maximale dans la vente automobile. Il était important pour nous d'intégrer toutes les fonctionnalités essentielles du secteur et de les rendre aussi intuitives que possible. Notre logiciel offre aux vendeurs de voitures et aux garages la solution idéale pour plus d'efficacité et de succès.",
+      "subHeading": "Nous sommes un nom de confiance dans l'industrie automobile",
+      "subContent": "Visited by Million of Car Buyers Every Month!",
+      "descriptionOne": "Nous sommes fiers de représenter la qualité, l'innovation et la fiabilité que nos clients apprécient depuis des années. Notre logiciel a été spécialement conçu pour répondre aux exigences spécifiques des vendeurs de voitures et des garages. Notre objectif est de simplifier vos processus de travail et de vous permettre de vous concentrer sur l'essentiel.",
+      "descriptionTwo": "Avec Carlusion, vous obtenez une solution à la fois performante et facile à utiliser. Il était particulièrement important pour nous d'intégrer toutes les fonctionnalités essentielles dans notre logiciel et de les rendre aussi conviviales que possible. Faites confiance à un logiciel qui vous offre une réelle valeur ajoutée et un avantage concurrentiel.",
+      "ourPartners": "Nos Partenaires",
+      "LearnMore": "En savoir plus",
+      "featureCards": [
+        {
+          "img": "briefcase",
+          "heading": "10 ans d'expérience",
+          "content": "Une décennie d'expérience et d'expertise. aites confiance à un logiciel qui a fait ses preuves et évolue avec les exigences du secteur."
+        },
+        {
+          "img": "trust",
+          "heading": "Fiable auprès des concessionnaires automobiles",
+          "content": "Notre logiciel est le premier choix des vendeurs de voitures et des garages. Éprouvé, fiable et conçu pour favoriser votre succès."
+        },
+        {
+          "img": "carIcon",
+          "heading": "Tarifs de forfaits abordables",
+          "content": "Trouvez les meilleures offres pour chaque budget. Notre logiciel vous aide à proposer des véhicules à des prix justes et compétitifs."
+        }
+      ]
+    },
+    "CarActionCards": {
+      "areYouLooking": "Cherchez-Vous",
+      "buyCar": "À Acheter Une Voiture?",
+      "buyContent": "Slamco laboris nisi ut aliquip ex ea comdo consequat uis aute irure dolor raeprehenderit voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "buyButton": "Découvrez Carlano.com",
+      "DoYouWantTo": "Voulez-vous",
+      "sellCar": "vendre votre voiture?",
+      "sellContent": "Slamco laboris nisi ut aliquip ex ea comdo consequat uis auteirure dolor raeprehenderit voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "sellButton": "Faites-le-nous savoir"
+    },
+    "footer": {
+      "ourPARTNERS": "Nos partenaires"
+    }
+  },
+  "aboutUs": {
+    "heading": "À PROPOS DE NOUS",
+    "content": "Nous révolutionnons la vente automobile avec un logiciel innovant. Forts de plusieurs années d'expérience et d'une passion pour l'efficacité, nous offrons aux garages et aux vendeurs de voitures les outils dont ils ont besoin pour un succès durable.",
+    "ImageContentCard": {
+      "heading": "NOTRE MISSION ET NOS VALEURS",
+      "content": "Notre mission est de proposer des solutions innovantes et conviviales qui optimisent le processus de vente de véhicules et favorisent le succès de nos clients. Nous visons à créer une plateforme durable, efficace et transparente, qui profite à la fois aux concessionnaires et aux acheteurs.",
+      "pointsArray": [
+        {
+          "pointHeading":"Innovation",
+          "pointContent":"Nous nous efforçons constamment d'intégrer les meilleures et dernières technologies pour répondre aux exigences du marché."
+        },
+        {
+          "pointHeading":"Satisfaction Client",
+          "pointContent":"Notre succès se mesure à la satisfaction de nos clients. Nous mettons tout en œuvre pour dépasser leurs attentes."
+        },
+        {
+          "pointHeading":"Confiance",
+          "pointContent":"Nous établissons la confiance grâce à la transparence, l'honnêteté et des services fiables."
+        },
+        {
+          "pointHeading":"Durabilité",
+          "pointContent":"Nous encourageons des pratiques durables, tant dans notre technologie que dans nos pratiques commerciales."
+        }
+      ],
+      "learnMore": "En savoir plus"
+    },
+    "MeetTheTeam": {
+      "heading": "RENCONTREZ L'ÉQUIPE",
+      "content": "Tempor incididunt labore dolore magna aliqua sed ipsum",
+      "team": [
+        {
+          "img": "profile",
+          "name": "James William",
+          "title": "Directeur général de Carlusion",
+          "description": "A dedicated professional responsible for ensuring that products and services meet the highest quality standards, overseeing testing processes, and implementing "
+        },
+        {
+          "img": "profile",
+          "name": "James William",
+          "title": "Directeur général adjoint de Carlusion",
+          "description": "A dedicated professional responsible for ensuring that products and services meet the highest quality standards, overseeing testing processes, and implementing "
+        },
+        {
+          "img": "profile",
+          "name": "James William",
+          "title": "Directeur technique de Carlusion",
+          "description": "A dedicated professional responsible for ensuring that products and services meet the highest quality standards, overseeing testing processes, and implementing "
+        }
+      ]
+    }
+  },
+  "product": {
+    "heading": "Produit",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "feature": {
+      "heading": "FONCTIONNALITÉS PRINCIPALES DE CARLUSION",
+      "content": "Tempor incididunt labore dolore magna aliqua sed ipsum",
+      "featuresArray": [
+        {
+          "img": "briefcase",
+          "heading": "Gestion des véhicules",
+          "content": "Carlusion is nisi aliquip ea consequat duis velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat."
+        },
+        {
+          "img": "briefcase",
+          "heading": "Gestion des contrats",
+          "content": "Carlusion is nisi aliquip ea consequat duis velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat."
+        },
+        {
+          "img": "briefcase",
+          "heading": "Gestion financière / Rapports annuels",
+          "content": "Carlusion is nisi aliquip ea consequat duis velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat."
+        },
+        {
+          "img": "trust",
+          "heading": "Gestion de la clientèle",
+          "content": "Carlusion is nisi aliquip ea consequat duis velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat."
+        },
+        {
+          "img": "trust",
+          "heading": "Gestion des stocks",
+          "content": "Carlusion is nisi aliquip ea consequat duis velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat."
+        },
+        {
+          "img": "trust",
+          "heading": "Gestion des demandes",
+          "content": "Carlusion is nisi aliquip ea consequat duis velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat."
+        },
+        {
+          "img": "carIcon",
+          "heading": "Gestion des offres",
+          "content": "Carlusion is nisi aliquip ea consequat duis velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat."
+        },
+        {
+          "img": "carIcon",
+          "heading": "Calendrier pour les rendez-vous et la planification",
+          "content": "Carlusion is nisi aliquip ea consequat duis velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat."
+        },
+        {
+          "img": "carIcon",
+          "heading": "Paiements",
+          "content": "Carlusion is nisi aliquip ea consequat duis velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat."
+        }
+      ]
+    },
+    "customerFeedback": {
+      "heading": "RETOUR DES CLIENTS",
+      "content": "Tempor incididunt labore dolore magna aliqua sed ipsum."
+    },
+    "DetailsPresentationCard": {
+      "heading": "PRÉSENTATION DÉTAILLÉE DES FONCTIONNALITÉS ET DU LOGICIEL",
+      "contentOne": "CARLUSION est une solution innovante spécialement conçue pour simplifier le quotidien des concessions automobiles et des garages. Notre approche consistait à créer une plateforme à la fois performante et conviviale, couvrant toutes les tâches essentielles de la vente automobile.",
+      "contentTwo": "Avec notre logiciel, vous gardez toujours une vue d’ensemble sur votre offre de véhicules et toutes les informations pertinentes. L’organisation et la gestion des données clients sont également optimisées pour vous permettre de répondre rapidement et facilement aux besoins individuels. La création et le suivi des contrats ou des offres sont simplifiés grâce à nos fonctionnalités optimisées, afin d’économiser du temps et des efforts.",
+      "WatchVideo": "Video schauen",
+      "contenThree": "De plus, Carlusion vous aide à structurer les processus financiers, allant de la vue d’ensemble des revenus à des rapports détaillés pour une planification éclairée. Même la planification des rendez-vous est intégrée de manière transparente dans le logiciel, vous aidant ainsi à organiser votre activité de manière optimale. Une vue claire de l’inventaire vous permet de toujours connaître l’état de votre stock de véhicules et de prendre des décisions précises.",
+      "contenFour": "Notre idée de base est claire : nous voulons vous fournir un outil qui simplifie les processus et vous aide à travailler de manière plus efficace et réussie. Carlusion n’est pas seulement un logiciel, c’est un compagnon fiable qui élève votre quotidien professionnel à un niveau supérieur. Avec un design bien pensé et des fonctionnalités polyvalentes, il vous offre tout ce dont vous avez besoin pour réussir dans le secteur automobile."
+    
+    }
+  },
+  "pricing": {
+    "heading": "TARIFICATION",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "ourPricing": {
+      "heading": "NOTRE TARIFICATION",
+      "content": "Tarification conçue pour les entreprises de toutes tailles",
+      "pricingPlans": [
+        {
+          "bgColor": "darkBlue",
+          "planName": "Basic",
+          "price": "89.90$",
+          "description": "Für kleine Unternehmen",
+          "features": [
+            "2 to 10 service providers",
+            "Unlimited SMS & Email notifications",
+            "Add-on integrations available"
+          ]
+        },
+        {
+          "bgColor": "primary",
+          "planName": "Standard",
+          "price": "89.90$",
+          "description": "Für mittelgrosse Unternehmen",
+          "features": [
+            "5 to 20 service providers",
+            "Unlimited SMS & Email notifications",
+            "Add-on integrations available"
+          ]
+        },
+        {
+          "bgColor": "secondary",
+          "planName": "Premium",
+          "price": "139.90$",
+          "description": "Für grosse Unternehmen",
+          "features": [
+            "10 to 50 service providers",
+            "Unlimited SMS & Email notifications",
+            "Priority support",
+            "Advanced integrations"
+          ]
+        }
+      ],
+      "tarrifPlan": [
+        {
+          "btnText": "Kostenlos testen",
+          "borderRadius": "rounded-[20px]",
+          "bgColor": "darkBlue",
+          "planName": "Basic",
+          "price": "49.90$",
+          "description": "Für kleine Unternehmen",
+          "features": [
+            "2 to 10 service providers",
+            "Unlimited SMS & Email notifications",
+            "Add-on integrations available"
+          ]
+        },
+        {
+          "btnText": "Unsubscribe",
+          "borderRadius": "rounded-[20px]",
+          "bgColor": "primary",
+          "planName": "Standard",
+          "price": "89.90$",
+          "description": "Für mittelgrosse Unternehmen",
+          "features": [
+            "5 to 20 service providers",
+            "Unlimited SMS & Email notifications",
+            "Add-on integrations available"
+          ]
+        },
+        {
+          "btnText": "Kostenlos testen",
+          "borderRadius": "rounded-[20px]",
+          "bgColor": "secondary",
+          "planName": "Premium",
+          "price": "139.90$",
+          "description": "Für grosse Unternehmen",
+          "features": [
+            "10 to 50 service providers",
+            "Unlimited SMS & Email notifications",
+            "Priority support",
+            "Advanced integrations"
+          ]
+        }
+      ],
+      "startFreeTrial": "Kostenlos testen"
+    },
+    "comparePlan": {
+      "heading": "COMPARAISON DES PLANS",
+      "content": "Vous souhaitez parler à un humain de nos plans ? ",
+      "startAChat": " Commencez un chat",
+      "plans": [
+        {
+          "name": "Basic",
+          "price": "$165/mo",
+          "description": "Petites entreprises",
+          "trial": "Démarrer la version d'essai"
+        },
+        {
+          "name": "Standard",
+          "price": "$265/mo",
+          "description": "Entreprises de taille moyenne",
+          "trial": "Démarrer la version d'essai"
+        },
+        {
+          "name": "Unlimitiert",
+          "description": "Grandes entreprises",
+          "price": "$365/mo",
+          "trial": "Démarrer la version d'essai"
+        }
+      ],
+      "tableData": [
+        {
+          "category": "",
+          "rows": [
+            {
+              "label": "Prix mensuels (USD)",
+           "values": [
+              "165 $/mois",
+              "265 $/mois",
+              "365 $/mois"
+            ]
+            },
+            {
+            "label": "Fournisseurs de services",
+            "description": "Seuls les employés fournissant des services sont comptabilisés",
+             "values": [
+              "2 à 10",
+              "Jusqu'à 20",
+              "Illimité"
+            ]
+            },
+            {
+             "label": "Emplacements supplémentaires",
+              "description": "Le premier emplacement est inclus dans chaque plan.",
+              "values": [
+              "95$/mois",
+              "135$/mois",
+              "175$/mois"
+            ]
+            }
+          ]
+        },
+        {
+          "category": "Fonctionnalités",
+          "rows": [
+            {
+              "label": "Calendrier & Planification",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Gestion des clients",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Réservation en ligne",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Vente au détail & Inventaire",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Gestion des employés",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Cartes-cadeaux",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Mitarbeiterverwaltung",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+             {
+              "label": "Applications mobiles",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Rapport",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Forfaits",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Abonnements",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Marketing",
+          "rows": [
+            {
+              "label": "Marketing par e-mail",
+              "values": [
+                "✓",
+                "Bezahlen nach Nutzung",
+                "Bezahlen nach Nutzung"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Traitement des paiements",
+          "rows": [
+            {
+              "label": "Transactions personnelles"
+            },
+            {
+              "label": "Transactions virtuelles"
+            },
+            {
+              "label": "Tarifs personnalisés"
+            },
+            {
+              "label": "Lecteur de cartes Bluetooth",
+             "values": [
+              "100 $/appareil",
+              "1 inclus",
+              "1 inclus"
+            ]
+            }
+
+          ]
+        },
+        {
+          "category": "Support client",
+          "rows": [
+            {
+              "label": "Support de chat intégré à l'application",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            },
+            {
+              "label": "Support téléphonique à la demande",
+              "values": [
+                "✓",
+                "✓",
+                "✓"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "reviews": {
+    "heading": "AVIS",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore..",
+    "post": "Publier",
+    "reply": "reply",
+    "share": "share",
+    "like": "likes"
+  },
+  "privacyPolicy": {
+    "heading": "POLITIQUE DE CONFIDENTIALITÉ ET CONDITIONS D'UTILISATION",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "privacyPolicy": {
+      "heading": "POLITIQUE DE CONFIDENTIALITÉ",
+      "content": "Chez Carlusion, votre confidentialité est de la plus haute importance pour nous. Cette politique de confidentialité décrit comment nous collectons, utilisons, divulguons et protégeons vos informations personnelles lorsque vous utilisez notre plateforme. En utilisant Carlusion, vous acceptez la collecte et l'utilisation de vos données conformément à cette politique."
+    },
+    "informationData": [
+      {
+        "number": 1,
+        "title": "Informations que nous collectons",
+        "content": "La protection de vos données personnelles est une priorité absolue chez CARLUSION. Avec cette politique de confidentialité, nous souhaitons vous informer de manière détaillée sur les données que nous collectons, la manière dont nous les traitons et les mesures que nous prenons pour assurer leur protection. Ces règles s’appliquent aussi bien à l’utilisation de notre site web qu’au logiciel de vente de voitures que nous mettons à disposition."
+      },
+      {
+        "number": 2,
+        "title": "Fichiers journaux",
+        "content": "CARLUSION collecte des données personnelles uniquement pour vous permettre d'utiliser nos services et pour améliorer continuellement leur qualité. Cela inclut des informations telles que votre nom, votre adresse e-mail, votre adresse postale, vos informations de carte de crédit et votre numéro de téléphone, que vous nous fournissez volontairement, par exemple lors de votre inscription ou de la prise de contact. De plus, des données techniques, comme votre adresse IP ou des informations sur votre interaction avec notre site web et notre logiciel, peuvent être collectées automatiquement. Ces données servent à améliorer nos services et ne sont jamais transmises à des tiers non autorisés sans votre consentement."
+      },
+      {
+        "number": 3,
+        "title": "Cookies et balises web",
+        "content": "Nous utilisons vos données exclusivement à des fins clairement définies. Cela inclut la fourniture de notre logiciel, le traitement de vos demandes et l'analyse des habitudes d'utilisation afin d'adapter nos services à vos besoins. Vos données sont stockées uniquement pendant la durée nécessaire à ces fins et sont traitées en stricte conformité avec les réglementations légales. CARLUSION applique les normes de sécurité les plus avancées pour protéger vos informations contre tout accès non autorisé, perte ou usage abusif."
+      },
+      {
+        "number": 4,
+        "title": "Politiques de confidentialité",
+        "content": "Vous avez le droit de demander à tout moment des informations sur les données que nous stockons. Si ces données sont incorrectes, vous pouvez demander leur correction ou, en cas d’intérêt légitime, exiger leur suppression. Nous sommes à votre disposition pour toute question ou préoccupation concernant la protection des données."
+      },
+      {
+        "number": 5,
+        "title": "Datenschutzrichtlinien",
+        "content": "Les cookies jouent un rôle important sur notre site web afin de vous offrir une expérience utilisateur optimale. Ces petits fichiers stockent des paramètres et des informations d'utilisation et nous aident à personnaliser nos services pour vous. Pour plus d'informations, veuillez consulter notre politique relative aux cookies."
+      }
+    ],
+    "termsofService": {
+      "heading": "Conditions d'utilisation",
+      "content": "At Carlusion, your privacy is of the utmost importance to us. This Privacy Policy outlines how we collect, use, disclose, and safeguard your personal information when you use our platform. By using Carlusion, you agree to the collection and use of your in accordance with this policy."
+    },
+    "termsOfServicesData": [
+      {
+        "number": 1,
+        "title": "Informationen, die wir sammeln",
+        "content": "L'utilisation du site web et du logiciel CARLUSION est soumise aux conditions suivantes. En accédant à nos services, vous acceptez ces règles. Notre logiciel a été spécialement conçu pour offrir aux vendeurs de voitures et aux garages une solution flexible et performante pour organiser leurs opérations quotidiennes. Nous attendons de nos utilisateurs qu'ils utilisent le logiciel de manière responsable et en conformité avec les réglementations légales en vigueur."
+      },
+      {
+        "number": 2,
+        "title": "Protokolldateien",
+        "content": "L'inscription est une condition préalable à l'utilisation de notre logiciel. En tant qu'utilisateur enregistré, vous êtes responsable de la sécurité de vos identifiants de connexion et de leur protection contre tout accès non autorisé. Toute forme d'utilisation abusive, qu'il s'agisse de fausses déclarations ou d'actions contrevenant aux lois en vigueur, est strictement interdite."
+      },
+      {
+        "number": 3,
+        "title": "Cookies and Web Beacons",
+        "content": "Notre logiciel offre une variété de fonctionnalités conçues pour optimiser vos flux de travail. Celles-ci incluent la gestion des véhicules, des contrats et des données clients, ainsi que la création de bilans financiers et de rapports. Toutes ces fonctionnalités sont disponibles dans le cadre des services fournis, mais CARLUSION ne garantit pas la disponibilité continue du logiciel. Des travaux de maintenance ou des perturbations techniques peuvent limiter temporairement l'accès."
+      },
+      {
+        "number": 4,
+        "title": "Datenschutzrichtlinien",
+        "content": "La sécurité de vos données nous tient à cœur. Cependant, CARLUSION n'assume aucune responsabilité pour les dommages résultant d'une mauvaise utilisation du logiciel ou de problèmes techniques imprévisibles. Il est de votre responsabilité de créer régulièrement des copies de sauvegarde de vos données afin d'éviter toute perte."
+      },
+      {
+        "number": 5,
+        "title": "Datenschutzrichtlinien",
+        "content": "Nous nous réservons le droit de modifier ces conditions d'utilisation à tout moment. Les modifications importantes vous seront communiquées en temps utile sur notre site web ou par e-mail. Si vous n'acceptez pas ces modifications, vous êtes libre de cesser d'utiliser nos services."
+      },
+      {
+        "number": 6,
+        "title": "Datenschutzrichtlinien",
+        "content": "Toutes les questions juridiques liées à l'utilisation des services CARLUSION sont régies par les lois du pays où notre entreprise est établie. La juridiction pour tout différend juridique est la Suisse. Si vous avez des questions ou des préoccupations concernant ces conditions d'utilisation, vous pouvez contacter notre support client à tout moment."
+      }
+    ]
+  },
+  "tipsAndNews": {
+    "heading": "POLITIQUE DE CONFIDENTIALITÉ",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "latestNews": {
+      "heading": "DERNIÈRES NOUVELLES",
+      "content": "Tempor incididunt labore dolore magna aliqua sed ipsum"
+    }
+  },
+  "carDetailsPage": {
+    "heading": "toyota avalon TX",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "carDetails": {
+      "name": "toyota avalon TX",
+      "descriptionOne": "Wir verwenden Cookies und ähnliche Tracking-Technologien, um Ihre Erfahrung auf unserer Website zu verbessern, den Traffic der Website zu analysieren und Inhalte zu personalisieren. Sie können wählen, Cookies über die Einstellungen Ihres Browsers zu deaktivieren, aber dies könnte Ihre Fähigkeit beeinträchtigen, einige Funktionen unserer Plattform zu nutzen.",
+      "descriptionTwo": "We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable cookies through your browser settings, but this may affect your ability to use some features of our platform. We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable cookies through your browser settings, but this may affect your ability to use some features of our platform."
+    },
+    "recentViewed": {
+      "heading": "RÉCEMMENT CONSULTÉ",
+      "content": "Tempor incididunt labore dolore magna aliqua sed ipsum"
+    }
+  },
+  "tipsAndNewDetailPage": {
+    "heading": "BLOG D'ACTUALITÉS",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "detailsCard": {
+      "heading": "GENERAL MOTORS PREMIER EN VOITURES AUTONOMES",
+      "contentOne": "We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable ",
+      "contentTwo": "cookies through your browser settings, but this may affect your ability to use some features of our platform. We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You choose to disable cookies through your browser settings, but this may affect your ability to use some features of our platform. ",
+      "coutentThree": "We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable cookies through your browser settings, but this may affect your ability to use some features ofour platform. ",
+      "contentFour": "We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable",
+      "contentFive": "We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable We use cookies and similar tracking technologies to enhance your experience on our site, analyze site traffic, and personalize content. You can choose to disable"
+    }
+  }
+
+}

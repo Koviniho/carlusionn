@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins;
+    background-color: rgba(25, 219, 140, 0.03) !important;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1367px) {
+  body {
+    transform: scale(0.9); /* Slightly increase the scale */
+    transform-origin: top left;
+    width: 111%; /* Adjust width proportionally */
+    height: 100vh;
+  }
+}
+
+input[type="checkbox"]:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* for radio */
+
+input[type="radio"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid gray;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+input[type="radio"]:checked {
+  background-color: #1e599b; /* Change this to your primary color */
+  border-color: #1e599b;
+}
+
+input[type="radio"]::after {
+  content: "";
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+input[type="radio"]:checked::after {
+  display: block;
+}
+/* ======================================================= Schedule X Calendar Styling Start */
+.sx__week-grid__date {
+  background: #1a2042;
+  color: white;
+  border-right: 0.1px solid #19db8c;
+}
+.sx__week-grid__date .sx__week-grid__day-name {
+  color: white !important;
+}
+.sx__week-grid__date .sx__week-grid__date-number {
+  color: white !important;
+}
+.sx__week-grid__date--is-today .sx__week-grid__day-name {
+  color: #19db8c !important;
+}
+.sx__week-grid__date--is-today .sx__week-grid__date-number {
+  background-color: white !important;
+  color: #1a2042 !important;
+}
+.sx__range-heading {
+  color: #1a2042 !important;
+}
+.sx__chevron-wrapper .sx__chevron {
+  border-color: #1a2042 !important;
+}
+.sx__view-selection-selected-item {
+  background-color: #1a2042;
+  color: white;
+}
+.sx__view-selection-selected-item:hover {
+  background-color: white;
+  color: #1a2042;
+}
+.sx__view-selection-item:hover,
+.sx__view-selection-item .is-selected {
+  background: #1a2042 !important;
+  color: white !important;
+}
+
+.sx__date-picker__day.sx__date-picker__day--today {
+  background: #1a2042 !important;
+  color: white !important;
+}
+
+.sx__date-picker__day.sx__date-picker__day--selected:not(
+    .sx__date-picker__day--today
+  ) {
+  background: #1a204295 !important;
+  color: white !important;
+}
+
+.sx__date-input--active .sx__date-input-label {
+  color: #1a2042 !important;
+}
+.sx__date-input--active .sx__date-input {
+  border-color: #1a2042 !important;
+  outline: 1px solid #1a2042 !important;
+}
+.sx__calendar {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* ======================================================= Schedule X Calendar Styling End */
+
+/* /////birthday list .////////////// */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.2s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.2s ease-out;
+}
+
+
+/* ////////for slider of vehicle detail page  */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.first-letter-cap::first-letter {
+  text-transform: uppercase;
+}
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

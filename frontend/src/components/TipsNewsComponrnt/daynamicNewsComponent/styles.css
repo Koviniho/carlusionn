@@ -1,0 +1,19 @@
+.custom-prev-arrow,
+.custom-next-arrow {
+  transition: color 0.3s ease;
+}
+
+/* .custom-prev-arrow:hover,
+.custom-next-arrow:hover {
+  background-color: white;
+  color: "#1A2042"; 
+} */
+/* .slick-slide {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+} */
+
+/* Active slides have full opacity */
+.slick-current.slick-active {
+  opacity: 1;
+}
