@@ -1,2 +1,7 @@
 // Firebase disabled – not used in this project
-export default {}
+
+const firebase = {
+    // dummy stub – add functions here if needed later
+}
+
+export default firebase
