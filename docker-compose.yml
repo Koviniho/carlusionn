@@ -36,16 +36,15 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
-      - PORT=3004
-      - MONGO_URI=mongodb://root:supersecret@mongo:27017/anicaijosip?authSource=admin
+      - PORT=3099
     ports:
-      - "3004:3004"
+      - "3099:3099"
     networks:
       - carlusion-network
     depends_on:
       - mongo
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3004/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:3099/health"]
       interval: 30s
       timeout: 10s
       retries: 3

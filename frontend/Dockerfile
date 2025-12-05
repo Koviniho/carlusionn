@@ -13,6 +13,6 @@ COPY . .
 RUN npm run build
 
 # Vite Preview auf 0.0.0.0:8080
-EXPOSE 8080
+EXPOSE 8089
 
-CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "8089"]
